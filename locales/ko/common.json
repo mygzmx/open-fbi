@@ -1,0 +1,75 @@
+{
+  "home": {
+    "home": "홈",
+    "recommend": "추천",
+    "browse": "분류",
+    "app": "App",
+    "more": "추가",
+    "privacyPolicy": "개인정보 정책",
+    "termsOfUse": "이용약관",
+    "allRightsReserved": "판권 소유",
+    "play": "놀다",
+    "back": "뒤로가기",
+    "email": "이메일",
+    "emptyDesc": "컨텐츠를 찾을 수 없음",
+    "episodes": "회",
+    "about": "소개",
+    "contact": "문의",
+    "community": "커뮤니티"
+  },
+  "热门好剧": "베스트",
+  "必看好剧": "강추",
+  "当前热播": "인기",
+  "精彩剧集": "하이라이트",
+  "browse": {
+    "all": "전부의"
+  },
+  "bookInfo": {
+    "playNow": "지금 재생",
+    "more": "추가",
+    "viewMore": "더 보기",
+    "introduction": "소개",
+    "previousPage": "이전 페이지",
+    "nextPage": "다음 페이지",
+    "lastChapterTip": "이미 마지막 장입니다",
+    "firstChapterTip": "이미 첫 번째 장입니다",
+    "like": "당신이 좋아할 만한",
+    "relatedEpisodes": "관련 드라마",
+    "downloadTip": "이 에피소드를 보려면 App을 다운로드해야 합니다",
+    "episodesDownload": "응용 프로그램 다운로드",
+    "episodes": "회",
+    "first": "제",
+    "episode": "회",
+    "recLike": "취향 추측",
+    "totalEpisodes": "회차수",
+    "episodeList": "에피소드 목록",
+    "share": "공유",
+    "shareCopy": "링크가 클립보드에 복사되었습니다."
+  },
+  "appPage": {
+    "title": "DramaBox - 환상적인 이야기와 단편",
+    "content": "출퇴근 시간이나 점심 시간에 시청하거나 긴 하루를 보낸 후 긴장을 풀고 싶은 콘텐츠를 찾고 계신가요?\n 더 이상 우리의 Dramabox를 보지 마십시오!\n저희 앱을 사용하면 최고의 크리에이터들이 제공하는 엄선된 고품질 콘텐츠에 액세스할 수 있습니다. \n인디 영화에서 수상 경력에 빛나는 TV 시리즈에 이르기까지 모두를 위한 무언가가 있습니",
+    "download": "다운로드",
+    "clickCopy": "링크를 복사하려면 클릭하세요.",
+    "copied": "복사되었습니다. 모바일 브라우저에서 링크를 열어 앱을 다운로드하세요.",
+    "copyGuide": "핸드폰으로 QR 코드를 스캔하여 다운로드하세요.또는 링크를 복사해 모바일 브라우저로 열어 다운로드한다.",
+    "slogan": "연극에 깊이 들어가다"
+  },
+  "others": {
+    "error": "아이고, 404를 못 찾겠어..."
+  },
+  "tag": {
+    "relevant": "Relevant popular keywords",
+    "relation1": "DramaBox has found related content about ",
+    "relation2": "for you.\nThis includes books related to ",
+    "relation3": ",\nas well as ",
+    "relation4": "related content information."
+  },
+  "banner": {
+    "OpenApp": "DramaBox 앱을 열고 더 많은 하이라이트 보기",
+    "Open": "열기",
+    "GuideText": "DramaBox 앱 열기",
+    "GuideOpen": "오픈"
+  }
+
+}

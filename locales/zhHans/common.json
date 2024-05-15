@@ -1,0 +1,74 @@
+{
+  "home": {
+    "home": "首页",
+    "recommend": "推荐",
+    "browse": "分类",
+    "app": "App",
+    "more": "更多",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "用户协议",
+    "allRightsReserved": "版权所有",
+    "play": "播放",
+    "back": "返回",
+    "email": "邮箱",
+    "emptyDesc": "没找到内容",
+    "episodes": "集",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "community": "社区"
+  },
+  "热门好剧": "热门好剧",
+  "必看好剧": "必看好剧",
+  "当前热播": "当前热播",
+  "精彩剧集": "精彩剧集",
+  "browse": {
+    "all": "全部"
+  },
+  "bookInfo": {
+    "playNow": "立即播放",
+    "more": "更多",
+    "viewMore": "查看更多",
+    "introduction": "简介",
+    "previousPage": "上一页",
+    "nextPage": "下一页",
+    "lastChapterTip": "当前已在最后一页",
+    "firstChapterTip": "当前已在第一页",
+    "like": "你也许也喜欢",
+    "relatedEpisodes": "相关剧集",
+    "downloadTip": "本集需要下载App观看",
+    "episodesDownload": "下载应用",
+    "episodes": "集",
+    "first": "第",
+    "episode": "集",
+    "recLike": "猜你喜欢",
+    "totalEpisodes": "剧集数",
+    "episodeList": "剧集列表",
+    "share": "分享",
+    "shareCopy": "链接已粘贴到剪贴板。"
+  },
+  "appPage": {
+    "title": "DramaBox - 追剧，电视，精彩故事",
+    "content": "在通勤、午餐时间或长时间工作学习后想放鬆吗？\n那就来试试我们的APP吧！\n热播爽剧追不停，随时随地嗨翻天！\n从独立电影到屡获殊荣的电视剧，我们为您提供多样的选择和持续更新的作品，总有精彩的内容吸引你！",
+    "download": "下载",
+    "clickCopy": "点击复制链接",
+    "copied": "已复制，请在手机浏览器中打开链接下载应用程序",
+    "copyGuide": "请使用手机扫描二维码下载。\n或复制链接，用手机浏览器打开后下载。",
+    "slogan": "进入短剧世界"
+  },
+  "others": {
+    "error": "404  抱歉，页面出现错误。"
+  },
+  "tag": {
+    "relevant": "Relevant popular keywords",
+    "relation1": "DramaBox has found related content about ",
+    "relation2": "for you.\nThis includes books related to ",
+    "relation3": ",\nas well as ",
+    "relation4": "related content information."
+  },
+  "banner": {
+    "OpenApp": "更多精彩内容，尽在DramaBox",
+    "Open": "打开",
+    "GuideText": "打开DramaBox App",
+    "GuideOpen": "打开"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "home": {
+    "home": "Inicio",
+    "recommend": "Recomendación",
+    "browse": "Categorías",
+    "app": "App",
+    "more": "Más",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfUse": "Terminos de uso",
+    "allRightsReserved": "todos los derechos reservados",
+    "play": "Reproducir",
+    "back": "Volver",
+    "email": "Buzón",
+    "emptyDesc": "Está vacio",
+    "episodes": "Episodios",
+    "about": "Sobre nosotros",
+    "contact": "Contáctanos",
+    "community": "Comunidad"
+  },
+  "热门好剧": "Más Populares",
+  "必看好剧": "Dramas Imprescindibles",
+  "当前热播": "Tendencia",
+  "精彩剧集": "Le Puede Gustar",
+  "browse": {
+    "all": "Todos"
+  },
+  "bookInfo": {
+    "playNow": "Reproducir",
+    "more": "más",
+    "viewMore": "Ver más",
+    "introduction": "Introducción",
+    "previousPage": "Página anterior",
+    "nextPage": "Siguiente página",
+    "lastChapterTip": "Ya el último capítulo",
+    "firstChapterTip": "Ya el primer capítulo",
+    "like": "Puede que también te guste",
+    "relatedEpisodes": "Episodios Relacionados",
+    "downloadTip": "Es necesario descargar este episodio para verlo",
+    "episodesDownload": "Descargar la aplicación",
+    "episodes": "Episodios",
+    "first": "Episodio ",
+    "episode": "",
+    "recLike": "Recomendado para ti",
+    "totalEpisodes": "Episodios Totales",
+    "episodeList": "Lista de Episodios",
+    "share": "Compartir",
+    "shareCopy": "El enlace se ha pegado al portapapeles。"
+  },
+  "appPage": {
+    "title": "DramaBox - películas y drama",
+    "content": "¿Busca algo que ver durante el trayecto diario al trabajo, la pausa para comer o simplemente para relajarse después de un largo día? \nDramabox es lo que necesita.\nCon nuestra aplicación, puede acceder a una gran selección de contenidos de alta calidad de algunos de los mejores creadores. \nDesde películas independientes a series de televisión galardonadas, tenemos algo para todos los gustos. A medida que añadimos nuevos contenidos con regularidad, siempre tendrá algo nuevo que ver.",
+    "download": "Descargar",
+    "clickCopy": "Haga clic para copiar el enlace",
+    "copied": "Copiado, abra el enlace en el navegador móvil para descargar la aplicación",
+    "copyGuide": "Escanee el código QR para descargarlo o abra el enlace en el navegador del teléfono.",
+    "slogan": "Sumérgete en el drama"
+  },
+  "others": {
+    "error": "Ups, 404 no encontrado..."
+  },
+  "tag": {
+    "relevant": "Relevant popular keywords",
+    "relation1": "DramaBox has found related content about ",
+    "relation2": "for you.\nThis includes books related to ",
+    "relation3": ",\nas well as ",
+    "relation4": "related content information."
+  },
+  "banner": {
+    "OpenApp": "Abra la APP DramaBox para ver más dramas maravillosos",
+    "Open": "Abrir",
+    "GuideText": "Abre DramaBox App",
+    "GuideOpen": "Abre"
+  }
+}
