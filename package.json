@@ -11,6 +11,7 @@
     "stop": "pkill next-dramabox"
   },
   "dependencies": {
+    "@next/third-parties": "^14.3.0-canary.73",
     "@reduxjs/toolkit": "^2.2.4",
     "antd-mobile": "^5.36.0",
     "i18next": "^23.11.4",

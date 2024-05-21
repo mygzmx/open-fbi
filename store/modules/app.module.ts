@@ -1,8 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, SliceCaseReducers } from "@reduxjs/toolkit";
 import { EDevice, IAppStore } from "@/store/index.interfaces";
-import { SliceCaseReducers } from "@reduxjs/toolkit/src/createSlice";
 
-export const appSlice = createSlice<IAppStore, SliceCaseReducers<IAppStore>>({
+export const appSlice = createSlice({
   name: 'app',
   initialState: (): IAppStore => ({
     device: EDevice.mobile,
