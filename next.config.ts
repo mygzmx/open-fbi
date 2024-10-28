@@ -32,10 +32,6 @@ const nextConfig: NextConfig = {
     return buildId;
   },
   transpilePackages: ['antd-mobile'],
-  sassOptions: {
-    includePaths: [path.join('./', 'styles')],
-    prependData: `@import "common.module.scss";`
-  },
   // 内置多语言
   i18n: i18nConfig.i18n,
   images: {
