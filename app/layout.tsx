@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <GA gaId="G-391BN8089P" />
+      {/*<GA gaId="G-391BN8089P" />*/}
     </html>
   );
 }
