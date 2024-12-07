@@ -46,7 +46,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
           </PageLayout>
         </ReduxProvider>
       </body>
-      {process.env.NODE_ENV === 'production' ? <GA gaId="G-391BN8089P"/> : null}
+      {/*{process.env.NODE_ENV === 'production' ? <GA gaId="G-391BN8089P"/> : null}*/}
     </html>
   );
 }
