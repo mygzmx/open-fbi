@@ -1,0 +1,23 @@
+{
+  "home": {
+    "home": "Home",
+    "recommend": "For You",
+    "resources": "Resources",
+    "browse": "Browse",
+    "app": "App",
+    "more": "More",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "allRightsReserved": "All Rights Reserved",
+    "play": "Play",
+    "back": "Back",
+    "email": "Email",
+    "emptyDesc": "It's empty!",
+    "episodes": "Episodes",
+    "about": "About",
+    "contact": "Contact Us",
+    "community": "Community",
+    "business": "Business Collaborations",
+    "joinUs": "Join Us"
+  }
+}

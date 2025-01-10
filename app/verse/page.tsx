@@ -3,14 +3,12 @@ import Link from "next/link";
 import styles from "@/app/page.module.scss";
 import { NextPage } from "next";
 
-const Home: NextPage = () => {
+const Verse: NextPage = () => {
   return (
     <main className={styles.homeWrap}>
-      <Link href={'/tools/image/png'}>/tools/image/png</Link>
-      <br/>
-      <Link href={'/verse'}>verse</Link>
+      <Link href={'/'}>Home</Link>
     </main>
   );
 }
 
-export default Home;
+export default Verse;

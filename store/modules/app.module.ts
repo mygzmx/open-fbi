@@ -1,3 +1,4 @@
+"use client";
 import { createSlice, PayloadAction, SliceCaseReducers } from "@reduxjs/toolkit";
 import { EDevice, IAppStore } from "@/store/index.interfaces";
 

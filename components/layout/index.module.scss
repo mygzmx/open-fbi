@@ -1,0 +1,76 @@
+.navContainer {
+  width: 100%;
+  position: sticky;
+  top: -1px;
+  z-index: 999;
+  background-color: var(--fe-background);
+  padding: 0.2rem 0.32rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  min-height: 1rem;
+  border-bottom: 0.5px solid rgba(185, 188, 199, 0.3);
+
+  .navLeft {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .logo {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 0.08rem;
+    }
+
+    .intro {
+      margin-left: .1rem;
+      font-size: 0.26rem;
+      font-weight: bold;
+    }
+  }
+
+  .navRight {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .theme {
+      margin-right: 0.2rem;
+      font-size: 0;
+
+      .sun {
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        border: 1px solid rgba(185, 188, 199, 0.3);
+        padding: 0.1rem;
+      }
+
+      .moon {
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        border: 1px solid rgba(185, 188, 199, 0.3);
+        padding: 0.15rem;
+      }
+    }
+
+    .avatarBox {
+
+    }
+
+    .avatar {
+      width: 0.6rem;
+      height: 0.6rem;
+    }
+  }
+}
+
+
+.footerBox {
+  height: .88rem;
+  border-top: 1px solid #333333;
+}

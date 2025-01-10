@@ -5,7 +5,7 @@ const i18nConfig = {
   // debug: process.env.NODE_ENV === 'development',
   i18n: {
     defaultLocale: 'en',
-      locales: ['en', 'zhHans', 'ko', 'zh', 'es'],
+      locales: ['en'],
       localeDetection: false, // 是否自动区域设置检测
   },
   react: { useSuspense: false },
