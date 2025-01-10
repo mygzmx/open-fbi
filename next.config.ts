@@ -1,5 +1,7 @@
 import path from "path";
 import i18nConfig from "./next-i18next.config.mjs";
+import type { NextConfig } from "next";
+
 // 网站域名
 const WebDomainObj = {
   dramabox: {
@@ -45,7 +47,7 @@ console.log('\x1B[34m%s\x1B[39m', 'IPUA:', IpUaUrl)
 console.log('\x1B[44m%s\x1B[49m', '-------------------------- ✨ ✨ ✨ ✨ ✨ ✨ --------------------------')
 
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   // Configuring the Build ID
   generateBuildId: async () => {
