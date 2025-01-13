@@ -1,5 +1,3 @@
-import path from "path";
-import i18nConfig from "./next-i18next.config.mjs";
 import type { NextConfig } from "next";
 // 网站服务api
 const BaseUrlObj = {
@@ -33,7 +31,11 @@ const nextConfig: NextConfig = {
   },
   transpilePackages: ['antd-mobile'],
   // 内置多语言
-  i18n: i18nConfig.i18n,
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh'],
+    localeDetection: false, // 是否自动区域设置检测
+  },
   images: {
     unoptimized: true
   },
@@ -43,22 +45,11 @@ const nextConfig: NextConfig = {
     WebDomain,
   },
   // rewrites: async () => [
-  //   // due to google api not work correct in some countries
   //   // we need a proxy to bypass the restriction
   //   { source: '/api/chat/google', destination: `${API_PROXY_ENDPOINT}/api/chat/google` },
   // ],
   // 参考 https://nextjs.org/docs/messages/swc-disabled
   experimental: {
-    optimizePackageImports: [
-      'emoji-mart',
-      '@emoji-mart/react',
-      '@emoji-mart/data',
-      '@icons-pack/react-simple-icons',
-      '@lobehub/ui',
-      'gpt-tokenizer',
-      'chroma-js',
-      'shiki',
-    ],
     webVitalsAttribution: ['CLS', 'LCP'],
   },
 }

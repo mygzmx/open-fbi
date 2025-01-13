@@ -5,7 +5,7 @@ import { SafeArea } from 'antd-mobile'
 import { BrowserIcon } from "@/components/BrowserIcon";
 import { setCookieTheme } from "@/utils/cookie";
 import { useRouter } from 'next/navigation';
-import styles from "@/components/layout/index.module.scss";
+import styles from "@/layout/page/index.module.scss";
 
 type IProps = {
   children: React.ReactNode;

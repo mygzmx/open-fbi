@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_xiala</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="16" height="16"></rect>
+        <rect id="path-3" x="0" y="0" width="16" height="13.3333333"></rect>
+    </defs>
+    <g id="网页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页" transform="translate(-1664, -627)">
+            <g id="编组-9" transform="translate(1626, 624)">
+                <g id="icon_xiala" transform="translate(46, 11) rotate(-90) translate(-46, -11)translate(38, 3)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="蒙版"></g>
+                    <g id="路径" mask="url(#mask-2)">
+                        <g transform="translate(0, 2.2222)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="蒙版" stroke="none" fill="none"></g>
+                            <path d="M11.7105996,1.00105538 C12.1242407,0.979284797 12.4772115,1.29695858 12.4989821,1.71059963 L12.9434266,10.1550441 C12.9668343,10.5997909 12.5997909,10.9668343 12.1550441,10.9434266 L3.71059963,10.4989821 C3.29695858,10.4772115 2.9792848,10.1242407 3.00105538,9.71059963 C3.02282596,9.29695858 3.37579683,8.9792848 3.78943788,9.00105538 L11.4010188,9.40101875 L11.0010554,1.78943788 C10.981099,1.41026691 11.2463702,1.08207576 11.6093296,1.01324147 L11.7105996,1.00105538 Z" id="路径" stroke="none" fill="#FF375F" fill-rule="nonzero" mask="url(#mask-4)" transform="translate(7.9722, 5.9722) rotate(45) translate(-7.9722, -5.9722)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

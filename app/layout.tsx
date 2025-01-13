@@ -2,12 +2,11 @@ import React, { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { Lora } from "next/font/google";
 // import { GoogleAnalytics as GA } from '@next/third-parties/google';
-import NextTopLoader from 'nextjs-toploader';
-import { ReduxProvider } from "@/store/ReduxProvider";
 import { cookies } from 'next/headers';
 import "@/app/globals.scss";
-import { OPEN_FBI_THEME } from "@/utils/const";
-import PageLayout from "@/components/layout";
+import { isDev, OPEN_FBI_THEME, DEFAULT_LANG, OPEN_FBI_LOCALE } from "@/utils/const";
+import { isRtlLang } from 'rtl-detect';
+import GlobalProvider from '@/layout/GlobalProvider';
 
 const lora = Lora({
   weight: ['400', '500', '600'],
@@ -35,18 +34,17 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
 
   const cookieStore = await cookies();
   const theme = cookieStore.get(OPEN_FBI_THEME);
+  const lang = cookieStore.get(OPEN_FBI_LOCALE);
+  const direction = isRtlLang(lang?.value || DEFAULT_LANG) ? 'rtl' : 'ltr';
 
   return (
-    <html lang="en" data-theme={theme?.value || "light"}>
+    <html dir={direction} lang={lang?.value || DEFAULT_LANG} data-theme={theme?.value || "light"} suppressHydrationWarning>
       <body className={lora.className}>
-        <NextTopLoader color={'#FF375F'} />
-        <ReduxProvider>
-          <PageLayout theme={theme?.value || "light"}>
-            {children}
-          </PageLayout>
-        </ReduxProvider>
+      <GlobalProvider>
+        {children}
+      </GlobalProvider>
       </body>
-      {/*{process.env.NODE_ENV === 'production' ? <GA gaId="G-391BN8089P"/> : null}*/}
+      {/*{!isDev ? <GA gaId="G-391BN8089P"/> : null}*/}
     </html>
   );
 }
