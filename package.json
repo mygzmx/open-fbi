@@ -29,13 +29,13 @@
     "ua-parser-js": "^2.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.1.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "cross-env": "^7.0.3",
-    "eslint": "^9",
+    "eslint": "^8",
     "eslint-config-next": "^15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "web-push": "^3.6.7"
   }
 }

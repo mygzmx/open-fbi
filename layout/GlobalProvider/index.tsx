@@ -6,7 +6,7 @@ import NextTopLoader from "nextjs-toploader";
 import { ReduxProvider } from "@/store/ReduxProvider";
 import { getAntdLocale } from "@/locales/getAntdLocale";
 import PageLayout from "@/layout/page";
-import { OPEN_FBI_THEME } from "@/utils/const";
+import { OPEN_FBI_LOCALE, OPEN_FBI_THEME } from "@/utils/const";
 
 interface GlobalLayoutProps {
   children: ReactNode;

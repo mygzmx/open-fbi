@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import analyzer from '@next/bundle-analyzer';
 // 网站服务api
 const BaseUrlObj = {
   // HOT: http://192.168.1.70:8080
@@ -14,13 +15,11 @@ const environment = "staging"; // 测试环境部署专用
 /** ⬆⬆⬆⬆⬆⬆✨✨✨✨✨✨ ℹℹℹℹℹℹℹℹℹℹ ✨✨✨✨✨✨⬆⬆⬆⬆⬆⬆ */
 
 const buildId = `open_fbi_${environment}_20241022`; // 构建ID
-const WebDomain = "https://www.openfbi.com";
 const BaseUrl = BaseUrlObj[environment]
 process.title = `next-${buildId}`;
 
 console.log('\x1B[44m%s\x1B[49m', '-------------------------- ✨ ✨ ✨ ✨ ✨ ✨ --------------------------')
 console.log('\x1B[34m%s\x1B[39m', '部署环境:', environment, '构建ID:', buildId)
-console.log('\x1B[34m%s\x1B[39m', '网站域名:', WebDomain)
 console.log('\x1B[34m%s\x1B[39m', 'API:', BaseUrl)
 console.log('\x1B[44m%s\x1B[49m', '-------------------------- ✨ ✨ ✨ ✨ ✨ ✨ --------------------------')
 
@@ -42,7 +41,7 @@ const nextConfig: NextConfig = {
   // 环境配置
   env: {
     BaseUrl,
-    WebDomain,
+    OFFICIAL_SITE: "https://www.openfbi.com", // 网站域名
   },
   // rewrites: async () => [
   //   // we need a proxy to bypass the restriction
@@ -52,6 +51,49 @@ const nextConfig: NextConfig = {
   experimental: {
     webVitalsAttribution: ['CLS', 'LCP'],
   },
+
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+        ],
+      },
+      {
+        source: '/sw.js',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'application/javascript; charset=utf-8',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'no-cache, no-store, must-revalidate',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self'",
+          },
+        ],
+      },
+    ]
+  },
 }
+
+const noWrapper = (config) => config;
+
+const withBundleAnalyzer = process.env.ANALYZE === 'true' ? analyzer() : noWrapper;
 
 export default nextConfig;

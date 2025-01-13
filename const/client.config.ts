@@ -12,17 +12,14 @@ const ClientConfig = {
     pname: "com.storymatrix.drama",
     link: "https://apps.apple.com/us/app/id6445905219",
     channelCode: "DISEO1000000",
-    BChannelCode: "DISEO1000001",
   },
   android: {
     pname: "com.storymatrix.drama",
     link: "https://play.google.com/store/apps/details?id=com.storymatrix.drama",
     channelCode: "DASEO1000000",
-    BChannelCode: "DASEO1000001",
   },
   logDataType: "dramabox",
   logType: "seo_dramaboxapp",
-  netHiveLink: "https://log.dramaboxdb.com/h5_stand_final_log.php"
 }
 
 export default ClientConfig;

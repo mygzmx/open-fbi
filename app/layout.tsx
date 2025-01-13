@@ -13,10 +13,24 @@ const lora = Lora({
   subsets: ['latin'],
 })
 
+const title = "FEHUB - Frontend Engineer Hub";
+const description = "Looking for something to watch during your daily commute, lunch break, or just to unwind after a long day? Look no further than our DramaBox! With our app, you...";
+const OFFICIAL_SITE = process.env.OFFICIAL_SITE;
 export const metadata: Metadata = {
-  title: "FEHUB - Frontend Engineer Hub",
+  title,
   keywords: ["DramaBox - Stream Drama Shorts", "Reels", "Entertainment", "DramaBox App", "DramaBox", "drama"],
-  description: "Looking for something to watch during your daily commute, lunch break, or just to unwind after a long day? Look no further than our DramaBox! With our app, you...",
+  description,
+  appleWebApp: {
+    statusBarStyle: 'black-translucent',
+    title,
+  },
+  icons: {
+    apple: '/apple-touch-icon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon-32x32.ico',
+  },
+  manifest: '/manifest.json',
+  metadataBase: new URL(OFFICIAL_SITE),
 };
 
 export const viewport: Viewport = {
