@@ -6,7 +6,7 @@
  * @link https://www.i18next.com/overview/typescript
  */
 import 'i18next'
-import type common from 'public/locales/en/common.json';
+import type common from '@/locales/en/common.json';
 
 interface I18nNamespaces {
   common: typeof common;

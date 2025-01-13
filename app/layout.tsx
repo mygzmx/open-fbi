@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import type { Metadata, Viewport } from "next";
 import { Lora } from "next/font/google";
-import { GoogleAnalytics as GA } from '@next/third-parties/google';
+// import { GoogleAnalytics as GA } from '@next/third-parties/google';
 import NextTopLoader from 'nextjs-toploader';
 import { ReduxProvider } from "@/store/ReduxProvider";
 import { cookies } from 'next/headers';

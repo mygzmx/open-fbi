@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import styles from "@/app/page.module.scss";
 import { NextPage } from "next";
@@ -6,7 +5,7 @@ import { NextPage } from "next";
 const Home: NextPage = () => {
   return (
     <main className={styles.homeWrap}>
-      <Link href={'/tools/image/png'}>/tools/image/png</Link>
+      <Link style={{ fontSize: '0.5rem' }} href={'/tools/image/png'}>/tools/image/png</Link>
       <br/>
       <Link href={'/verse'}>verse</Link>
     </main>

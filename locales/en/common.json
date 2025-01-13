@@ -1,7 +1,8 @@
 {
   "home": {
     "home": "Home",
-    "recommend": "Recommend",
+    "recommend": "For You",
+    "resources": "Resources",
     "browse": "Browse",
     "app": "App",
     "more": "More",
@@ -15,60 +16,8 @@
     "episodes": "Episodes",
     "about": "About",
     "contact": "Contact Us",
-    "community": "Community"
-  },
-  "热门好剧": "Top Hits",
-  "必看好剧": "Must-sees",
-  "当前热播": "Trending",
-  "精彩剧集": "Hidden Gems",
-  "browse": {
-    "all": "All"
-  },
-  "bookInfo": {
-    "playNow": "Play Now",
-    "more": "more",
-    "viewMore": "View More",
-    "introduction": "Introduction",
-    "previousPage": "Previous page",
-    "nextPage": "Next page",
-    "lastChapterTip": "Already the last chapter",
-    "firstChapterTip": "Already the first chapter",
-    "like": "You may like",
-    "relatedEpisodes": "Related Episodes",
-    "downloadTip": "This episode needs to be downloaded to watch",
-    "episodesDownload": "Download The App",
-    "episodes": "Episodes",
-    "first": "Episode ",
-    "episode": "",
-    "recLike": "Recommended for you",
-    "totalEpisodes": "Total Episodes",
-    "episodeList": "Episode List",
-    "share": "Share",
-    "shareCopy": "The link has been pasted to your clipboard."
-  },
-  "appPage": {
-    "title": "DramaBox - movies and drama",
-    "content": "Looking for something to watch during your daily commute, lunch break, or just to unwind after a long day?\n Look no further than our Dramabox!\nWith our app, you can access a huge selection of high-quality content from some of the best creators out there.\n From indie films to award-winning TV series, we've got something for everyone.\n And with new content added regularly, you'll always have something fresh to watch.",
-    "download": "Download",
-    "clickCopy": "Click to copy the link",
-    "copied": "Copied, open the link in the mobile browser to download the App",
-    "copyGuide": "Scan the QR code to download, \nor open the link in phone browser.",
-    "slogan": "Dive into drama"
-  },
-  "others": {
-    "error": "Oooops, 404 not found..."
-  },
-  "tag": {
-    "relevant": "Relevant popular keywords",
-    "relation1": "DramaBox has found related content about ",
-    "relation2": "for you.\nThis includes books related to ",
-    "relation3": ",\nas well as ",
-    "relation4": "related content information."
-  },
-  "banner": {
-    "OpenApp": "Open the DramaBox App for more wonderful short dramas",
-    "Open": "Open",
-    "GuideText": "Open DramaBox App",
-    "GuideOpen": "Open"
+    "community": "Community",
+    "business": "Business Collaborations",
+    "joinUs": "Join Us"
   }
 }

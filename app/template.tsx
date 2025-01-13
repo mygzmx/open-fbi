@@ -20,7 +20,9 @@ const Template = ({ children }: { children: ReactNode }) => {
     );
     window.addEventListener("keydown", notAllowCopy);
     return () => {
-      timer && clearInterval(timer);
+      if (timer) {
+        clearInterval(timer);
+      }
       window.removeEventListener("keydown", notAllowCopy);
     }
   }, []);

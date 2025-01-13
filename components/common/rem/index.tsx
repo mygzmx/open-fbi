@@ -11,6 +11,9 @@ const RemFlexible: FC<IProps> = ({ mobileScreenWidth = 750, pcFontSize = '83.3px
   // if (typeof window === "undefined") return;
   return <Script id='rem_flexible' strategy={"beforeInteractive"} dangerouslySetInnerHTML={{
     __html: `(function flexible(window, document) {
+    console.log('111111111111')
+    // if (typeof window !== 'undefined') return;
+    console.log('22222222222')
     var docEl = document.documentElement;
     function setPageFontsize() {
       document.documentElement.style.setProperty('--vh', (window.innerHeight / 100) + 'px');

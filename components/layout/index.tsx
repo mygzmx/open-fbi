@@ -7,7 +7,6 @@ import { setCookieTheme } from "@/utils/cookie";
 import { useRouter } from 'next/navigation';
 import styles from "@/components/layout/index.module.scss";
 
-
 type IProps = {
   children: React.ReactNode;
   theme: string;
