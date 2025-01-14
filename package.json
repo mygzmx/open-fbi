@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "https-dev": "next dev --experimental-https --experimental-https-key ./localhost-key.pem --experimental-https-cert ./localhost.pem -p 4000",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -35,6 +36,7 @@
     "@types/react-dom": "^19",
     "eslint": "^8",
     "eslint-config-next": "^15",
+    "express": "^4.21.2",
     "typescript": "^5",
     "web-push": "^3.6.7"
   }

@@ -35,9 +35,7 @@ const nextConfig: NextConfig = {
     locales: ['en', 'zh'],
     localeDetection: false, // 是否自动区域设置检测
   },
-  images: {
-    unoptimized: true
-  },
+  images: { unoptimized: true },
   // 环境配置
   env: {
     BaseUrl,
@@ -47,11 +45,6 @@ const nextConfig: NextConfig = {
   //   // we need a proxy to bypass the restriction
   //   { source: '/api/chat/google', destination: `${API_PROXY_ENDPOINT}/api/chat/google` },
   // ],
-  // 参考 https://nextjs.org/docs/messages/swc-disabled
-  experimental: {
-    webVitalsAttribution: ['CLS', 'LCP'],
-  },
-
   async headers() {
     return [
       {
@@ -84,7 +77,8 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self'",
+            // value: "default-src 'self'; script-src 'self'", // 生产使用
+            value: "default-src 'self'; style-src 'self' 'unsafe-inline'" // 仅测试使用
           },
         ],
       },
@@ -96,4 +90,4 @@ const noWrapper = (config) => config;
 
 const withBundleAnalyzer = process.env.ANALYZE === 'true' ? analyzer() : noWrapper;
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

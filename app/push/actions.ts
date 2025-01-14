@@ -3,7 +3,7 @@
 import webpush from 'web-push'
 
 webpush.setVapidDetails(
-  '<mailto:yanggz@dianzhong.com>',
+  'mailto:350926623@qq.com',
   process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
   process.env.VAPID_PRIVATE_KEY!
 )
