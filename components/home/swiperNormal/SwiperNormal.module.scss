@@ -1,143 +1,119 @@
 .swiperBox {
-  height: 4.2rem;
-  width: 100vw;
-  overflow: hidden;
-  font-size: 0;
+  margin-bottom: 0.56rem;
+  overflow: initial;
+  padding: 0 0.16rem;
 
   :global {
-
-    .adm-swiper-indicator {
-      transform: translateX(0);
-      left: auto;
-      right: 0.24rem;
-      bottom: 0.24rem;
+    button {
+      display: none;
     }
 
-    .adm-page-indicator {
-      --active-dot-color: #FFFFFF !important;
-      --dot-color: rgba(238, 238, 238, 0.3) !important;
-      --dot-border-radius: 50% !important;
-      --active-dot-border-radius: 50% !important;
+    .slick-dots {
+      font-size: 0;
+      bottom: -15px;
+
+      li {
+        width: 0.16rem;
+        height: 0.07rem;
+        border-radius: 0.04rem;
+        background: rgba(255, 255, 255, 0.12);
+        margin: 0 0.05rem;
+      }
+      .slick-active {
+        background-color: #FF375F !important;
+      }
     }
 
-    .adm-page-indicator-dot {
-      width: 0.16rem;
-      height: 0.06rem;
-      border-radius: 0.02rem;
+    .slick-slide {
+      font-size: 0;
+      padding: 0 0.08rem;
     }
   }
 }
 
-.content {
-  height: 4.2rem;
+.swiperItem {
+  width: 100%;
+  height: 2.94rem;
+  display: flex !important;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.08rem;
+  position: relative;
 
   .contentImgBox {
-    display: inline-block;
-    width: 100%;
-    height: 4.2rem;
-    overflow: hidden;
-    background: url("../../../public/images/cover/wap-banner.png") 0 0 / 100% 100% no-repeat;
-
-    .contentImg {
-      width: 100%;
-      height: 4.2rem;
-    }
+    width: 2.18rem;
+    height: 2.94rem;
+    flex-shrink: 0;
+    border-radius: 0.08rem;
   }
 }
 
-.indicatorBox {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: 99;
-  transform: translateY(-50%);
-  width: 1.9rem;
+.rightCard {
+  padding: 0.16rem 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  .indicatorItem {
-    width: 1.9rem;
-    height: 0.64rem;
-    font-size: 0.18rem;
-    font-weight: bold;
-    color: #D0D3D7;
-    line-height: 0.64rem;
-    text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: all 0.2s;
+  .rightCardTop {
+    max-width: 4rem;
 
-    &:hover {
-      //font-size: 0.26rem;
-      //color: #FFFFFF;
-      background: linear-gradient(90deg, rgba(225,68,46,0) 0%, rgba(225,68,46,0.3) 67%, rgba(225,68,46,0.04) 100%);
-    }
-  }
-
-  .indicatorActive {
-    font-size: 0.26rem;
-    color: #FFFFFF;
-    background: linear-gradient(90deg, rgba(225,68,46,0) 0%, rgba(225,68,46,0.3) 67%, rgba(225,68,46,0.04) 100%);
-  }
-}
-
-.left {
-  display: block;
-  position: absolute;
-  top: 4.21rem;
-  left: 0;
-  width: 6.92rem;
-  z-index: 10;
-  font-size: 0;
-
-  .bookName {
-    display: block;
-    font-size: 0.18rem;
-    font-weight: bold;
-    color: #FFFFFF;
-    line-height: 0.25rem;
-  }
-
-  .tagsBox {
-    margin-top: 0.12rem;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    flex-wrap: wrap;
-    height: 0.34rem;
-
-    .tagItem {
-      margin-right: 0.08rem;
-      max-width: 3rem;
+    .bookName {
+      font-size: 0.28rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 0.4rem;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: nowrap;
-      height: 0.34rem;
-      flex-shrink: 0;
-      padding: 0.08rem 0.16rem;
-      background-color: rgba(255,107,58,0.1);
-      border-radius: 0.04rem;
-      font-size: 0.14rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      word-wrap: break-word;
+      margin-bottom: 0.16rem;
+    }
+
+    .chapterCount {
+      display: block;
+      font-size: 0.22rem;
       font-weight: 400;
-      color: red;
-      line-height: 0.18rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 0.3rem;
+      margin-bottom: 0.16rem;
+    }
+
+    .intro {
+      font-size: 0.24rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 0.33rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      word-wrap: break-word;
     }
   }
 
-  .intro {
-    margin-top: 0.12rem;
-    font-size: 0.16rem;
-    font-weight: 400;
-    color: rgba(255,255,255,0.6);
-    line-height: 0.26rem;
-    max-height: 0.52rem;
+  .rightCardBottom {
     overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    word-wrap: break-word;
+    max-width: 4.5rem;
+    max-height: 0.36rem;
+    font-size: 0.22rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    grid-gap: 0.08rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 0.36rem;
+
+    .rightTag {
+      flex-shrink: 0;
+      padding: 0 0.12rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.18rem;
+    }
   }
+
 }
 
 

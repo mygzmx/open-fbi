@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 import { Lora } from "next/font/google";
 import { GoogleAnalytics as GA } from '@next/third-parties/google';
 import { cookies } from 'next/headers';
+import "@/app/slick.min.css";
 import "@/app/globals.scss";
 import { OPEN_FBI_THEME, DEFAULT_LANG, OPEN_FBI_LOCALE, OPEN_FBI_GOOGLE_CODE, OFFICIAL_SITE } from "@/utils/const";
 import { isRtlLang } from 'rtl-detect';

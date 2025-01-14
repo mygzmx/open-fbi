@@ -1,48 +1,65 @@
 "use client"
 import React, { FC } from 'react';
-import { Swiper } from 'antd-mobile';
+import { ImageCover } from "@/components/common/image/ImageCover";
 import Link from "next/link";
-import Image from "next/image";
-import styles from '@/components/home/swiperNormal/SwiperNormal.module.scss';
+import { useTranslation } from "react-i18next";
+import Slider from "react-slick";
 import { IBookItem } from "@/types/home.interfaces";
+import styles from '@/components/home/swiperNormal/SwiperNormal.module.scss';
 
 interface IProps {
-  bannerList: IBookItem[];
+  bigList: IBookItem[];
 }
 
-const SwiperNormal: FC<IProps> = ({ bannerList }) => {
+const SwiperNormal: FC<IProps> = ({ bigList = [] }) => {
+  const { t } = useTranslation()
 
-  return <Swiper
-    autoplayInterval={3000}
-    style={{
-      '--height': '4.2rem',
-    }}
-    indicatorProps={{
-      style: {
-        '--dot-spacing': '0.08rem',
-      }
-    }}
-    className={styles.swiperBox}
-    autoplay
-    loop>
-    {bannerList.map((item, index) => (
-      <Swiper.Item key={item.bookId + index} className={styles.content}>
-        <Link
-          prefetch={false}
-          href={`/drama/${item.bookId}`}
-          className={styles.contentImgBox}
-        >
-          <Image
-            src={item.cover || '/images/cover/wap-banner.png'}
-            className={styles.contentImg}
-            width={702}
-            height={254}
-            alt={item.name}
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 600,
+    autoplaySpeed: 3000,
+  };
+
+  return (
+    <Slider {...settings} className={styles.swiperBox}>
+      {bigList.map((item) => {
+        const { bookId, cover, bookName, introduction = '', chapterCount = 0 } = item;
+        const routerToBookInfo = `/film/${bookId}`;
+        return <div key={item.bookId} className={styles.swiperItem}>
+          <ImageCover
+            href={routerToBookInfo}
+            className={styles.contentImgBox}
+            width={120}
+            height={162}
+            src={cover}
+            alt={bookName}
           />
-        </Link>
-      </Swiper.Item>
-    ))}
-  </Swiper>
+          <Link prefetch={false} className={styles.rightCard} href={routerToBookInfo}>
+            <div className={styles.rightCardTop}>
+              <h2 className={styles.bookName} >
+                {bookName}
+              </h2>
+              <p className={styles.chapterCount}>{chapterCount || 0} {t('home.episodes')}</p>
+              <p className={styles.intro}>{introduction}</p>
+            </div>
+            {
+              !!(item?.typeTwoList && item.typeTwoList.length) ? <div className={styles.rightCardBottom}>
+                {
+                  item.typeTwoList.map((typeTwoListItem) => (
+                    <div key={typeTwoListItem.id + '_' + item.bookId} className={styles.rightTag}>{typeTwoListItem.name}</div>
+                  ))
+                }
+              </div> : null
+            }
+          </Link>
+        </div>
+      })}
+    </Slider>
+  )
 }
 
 export default SwiperNormal;

@@ -1,7 +1,6 @@
 "use client"
 import React, { FC, useEffect, useState } from "react";
 import Image from "next/image"
-import { SafeArea } from 'antd-mobile'
 import { BrowserIcon } from "@/components/BrowserIcon";
 import { setCookieTheme } from "@/utils/cookie";
 import { useRouter } from 'next/navigation';
@@ -34,7 +33,6 @@ const PageLayout: FC<IProps> = ({ children, theme }) => {
   }, [themeColor])
 
   return <>
-    <SafeArea position={"top"}/>
     <div className={styles.navContainer}>
       <Link href={'/'} className={styles.navLeft}>
         <Image
@@ -68,7 +66,6 @@ const PageLayout: FC<IProps> = ({ children, theme }) => {
 
     {children}
     <PageFooter/>
-    <SafeArea position='bottom'/>
   </>
 }
 

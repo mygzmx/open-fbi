@@ -28,7 +28,6 @@ const nextConfig: NextConfig = {
   generateBuildId: async () => {
     return buildId;
   },
-  transpilePackages: ['antd-mobile'],
   // 内置多语言
   i18n: {
     defaultLocale: 'en',

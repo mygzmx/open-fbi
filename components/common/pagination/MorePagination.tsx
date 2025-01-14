@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
-import { Toast } from "antd-mobile";
+import { ToastShow } from "@/utils/toast";
 import styles from '@/components/common/pagination/MorePagination.module.css';
 
 interface IProps {
@@ -20,7 +20,7 @@ const MorePagination: FC<IProps> = ({ prevPath, totalPage, page, query = '' }) =
       </Link> :
       <div
         onClick={() => {
-          Toast.show('当前已在第一页')
+          ToastShow('当前已在第一页')
         }}
         className={styles.pageItem}
       >上一页</div>}
@@ -30,7 +30,7 @@ const MorePagination: FC<IProps> = ({ prevPath, totalPage, page, query = '' }) =
       </Link> :
       <div
         onClick={() => {
-          Toast.show('当前已在最后一页')
+          ToastShow('当前已在最后一页')
         }}
         className={styles.pageItem}>
         下一页

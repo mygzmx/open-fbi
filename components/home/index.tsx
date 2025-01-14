@@ -18,10 +18,10 @@ const WapHome: FC<IProps> = ({ bigList, smallData}) => {
   const { t } = useTranslation();
   return (
     <div className={styles.homeWrap}>
-      <SwiperNormal bannerList={bigList}/>
+      <SwiperNormal bigList={bigList}/>
       <SwiperArea bannerList={bigList}/>
 
-      {smallData.map((item, index) => {
+      {smallData.map((item) => {
         return <div key={item.id} className={styles.mainContent}>
           <HomeTitle title={t(item.name)} href={`/more/${ColumnNameRoute[item.name]}`}/>
           <FirstList dataSource={item.items || []} />

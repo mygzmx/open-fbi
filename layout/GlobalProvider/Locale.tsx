@@ -1,20 +1,15 @@
 'use client';
-
-import { ConfigProvider } from 'antd-mobile';
 import { PropsWithChildren, memo, useEffect, useState } from 'react';
 import { createI18nNext } from '@/locales/create';
 import { isOnServerSide } from '@/utils/const';
-import { getAntdLocale } from "@/locales/getAntdLocale";
 
 interface LocaleLayoutProps extends PropsWithChildren {
-  antdLocale?: any;
   defaultLang?: string;
 }
 
-const Locale = memo<LocaleLayoutProps>(({ children, defaultLang, antdLocale }) => {
+const Locale = memo<LocaleLayoutProps>(({ children, defaultLang }) => {
   const [i18n] = useState(createI18nNext(defaultLang));
   const [lang, setLang] = useState(defaultLang);
-  const [locale, setLocale] = useState(antdLocale);
 
   // if run on server side, init i18n instance everytime
   if (isOnServerSide) {
@@ -32,11 +27,7 @@ const Locale = memo<LocaleLayoutProps>(({ children, defaultLang, antdLocale }) =
   useEffect(() => {
     const handleLang = async (lng: string) => {
       setLang(lng);
-
-      if (lang === lng) return;
-
-      const newLocale = await getAntdLocale(lng);
-      setLocale(newLocale);
+      console.log('语言切换变化 --->', lng);
     };
 
     i18n.instance.on('languageChanged', handleLang);
@@ -45,11 +36,7 @@ const Locale = memo<LocaleLayoutProps>(({ children, defaultLang, antdLocale }) =
     };
   }, [i18n, lang]);
 
-  return (
-    <ConfigProvider locale={locale}>
-      {children}
-    </ConfigProvider>
-  );
+  return children;
 });
 
 Locale.displayName = 'Locale';
