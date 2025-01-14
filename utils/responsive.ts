@@ -26,7 +26,7 @@ export const gerServerDeviceInfo = async () => {
     throw new Error('[Server method] you are importing a server-only module outside of server');
   }
 
-  const { get } = headers();
+  const { get } = await headers();
   const ua = get('user-agent');
 
   // console.debug(ua);

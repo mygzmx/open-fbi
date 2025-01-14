@@ -2,8 +2,6 @@
 
 import { ConfigProvider } from 'antd-mobile';
 import { PropsWithChildren, memo, useEffect, useState } from 'react';
-import { isRtlLang } from 'rtl-detect';
-
 import { createI18nNext } from '@/locales/create';
 import { isOnServerSide } from '@/utils/const';
 import { getAntdLocale } from "@/locales/getAntdLocale";
@@ -47,11 +45,8 @@ const Locale = memo<LocaleLayoutProps>(({ children, defaultLang, antdLocale }) =
     };
   }, [i18n, lang]);
 
-  // detect document direction
-  const documentDir = isRtlLang(lang!) ? 'rtl' : 'ltr';
-
   return (
-    <ConfigProvider direction={documentDir} locale={locale}>
+    <ConfigProvider locale={locale}>
       {children}
     </ConfigProvider>
   );

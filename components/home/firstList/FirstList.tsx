@@ -7,11 +7,10 @@ import TypeTwoTag from "@/components/common/typeTwoTag";
 import styles from '@/components/home/firstList/FirstList.module.scss';
 
 interface IProps {
-  isLazy?: boolean;
   dataSource: IBookItem[];
 }
 
-const FirstList: FC<IProps> = ({ dataSource, isLazy}) => {
+const FirstList: FC<IProps> = ({ dataSource}) => {
   const { t } = useTranslation();
 
   return <div className={styles.firstListBox}>
@@ -23,7 +22,6 @@ const FirstList: FC<IProps> = ({ dataSource, isLazy}) => {
 
       return <div key={bookId} className={styles.itemBox}>
         <ImageCover
-          isLazy={isLazy || index > 11}
           href={routerToBookInfo}
           className={styles.bookImage}
           width={120}

@@ -17,7 +17,7 @@ const ErrorCapture = memo<ErrorCaptureProps>(({ reset, error }) => {
     <div>
       <button onClick={() => reset()}>retry</button>
       <Link href="/">
-        <button type={'info'}>backHome</button>
+        <button >backHome</button>
       </Link>
     </div>
   );

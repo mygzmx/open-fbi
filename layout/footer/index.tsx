@@ -2,15 +2,10 @@ import React, { FC } from 'react';
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import ClientConfig from "@/const/client.config";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import styles from '@/components/home/mFooter/MFooter.module.scss';
+import styles from '@/layout/footer/index.module.scss';
 
-interface IProps {}
-
-const MFooter: FC<IProps> = () => {
+const PageFooter: FC = () => {
   const { t } = useTranslation();
-  const router = useRouter();
 
   return <div className={styles.footerBox}>
 
@@ -30,21 +25,13 @@ const MFooter: FC<IProps> = () => {
         <Link prefetch={false} rel={'nofollow'} className={styles.footerLink} href={'/business'}>
           {t('home.business')}
         </Link>
-        <Link prefetch={false} rel={'nofollow'} className={styles.footerLinkEmail} href={`mailto:${ClientConfig.hrEmail}`}>
-          {`${t('home.joinUs')}: ${ClientConfig.hrEmail}`}
+        <Link prefetch={false} rel={'nofollow'} className={styles.footerLinkEmail} href={`mailto:hr@dramabox.com`}>
+          {`${t('home.joinUs')}: hr@dramabox.com`}
         </Link>
       </div>
     </div>
 
     <div className={styles.footerContent}>
-      <Image
-        className={styles.logoBox}
-        width={99}
-        height={22}
-        src={'/images/dramaboxapp/m-logo.png'}
-        alt={''}
-      />
-
       <div className={styles.community}>
         <div className={styles.communityLabel}>{t("home.community")}:</div>
         <Link
@@ -73,12 +60,12 @@ const MFooter: FC<IProps> = () => {
         </Link>
       </div>
 
-      <Link prefetch={false} rel={'nofollow'} className={styles.fmail} href={`mailto:${ClientConfig.email}`}>
-        {t("home.email")}: &nbsp;{ ClientConfig.email }
+      <Link prefetch={false} rel={'nofollow'} className={styles.fmail} href={`mailto:feedback@dramabox.com`}>
+        {t("home.email")}: &nbsp;feedback@dramabox.com
       </Link>
-      <p className={styles.fText}>© {ClientConfig.name}, {t('home.allRightsReserved')} {ClientConfig.companyName}</p>
+      <p className={styles.fText}>© {ClientConfig.name}, {t('home.allRightsReserved')} STORYMATRIX PTE.LTD.</p>
     </div>
   </div>
 }
 
-export default MFooter
+export default PageFooter

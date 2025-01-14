@@ -36,14 +36,15 @@ export const ImageCover: FC<IProps> = (props) => {
 
   const imageProps = useMemo(() => {
     const _props = {} as ImageProps;
-    const blackAttributes = ['scale', 'locale', 'onClick', 'className', 'href', 'replace', 'rel', 'shallow', 'isLazy'];
+    const blackAttributes = ['scale', 'locale', 'onClick', 'className', 'href', 'replace', 'rel', 'shallow'];
     for (const item in props) {
       if (blackAttributes.indexOf(item) === -1) {
-        _props[item] = props[item]
+        const value = Reflect.get(props, item)
+        Reflect.set(_props, item, value)
       }
     }
-    if(!_props.src) {
-      _props.src = defaultCover;
+    if(!Reflect.has(_props, 'src')) {
+      Reflect.set(_props, "src", defaultCover)
     }
     return _props;
   }, [props]);

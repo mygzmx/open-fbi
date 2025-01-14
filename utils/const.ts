@@ -17,3 +17,9 @@ export const OPEN_FBI_LOCALE = 'OPEN_FBI_LOCALE';
 export const isLocaleNotSupport = (locale: string) => {
   return normalizeLocale(locale) === DEFAULT_LANG || !supportLocales.includes(locale);
 };
+
+
+// export const OPEN_FBI_GOOGLE_CODE = isDev ? "" : "G-391BN8089P";
+export const OPEN_FBI_GOOGLE_CODE = "";
+
+export const OFFICIAL_SITE = process.env.OFFICIAL_SITE || "https://www.openfbi.com";

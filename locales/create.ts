@@ -1,11 +1,10 @@
-import i18n from 'i18next';
+import i18n, { InitOptions } from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { initReactI18next } from 'react-i18next';
 import { isRtlLang } from 'rtl-detect';
 import { normalizeLocale } from '@/locales/resources';
 import { COOKIE_CACHE_DAYS, DEFAULT_LANG, OPEN_FBI_LOCALE } from "@/utils/const";
-import { InitOptions } from "i18next/typescript/options";
 
 export const createI18nNext = (lang?: string) => {
   const instance = i18n

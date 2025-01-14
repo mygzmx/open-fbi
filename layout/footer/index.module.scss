@@ -1,12 +1,7 @@
 .footerBox {
-  height: 5.76rem;
   background-color: #1C1C1E;
   padding: 0.32rem 0.32rem 0.48rem;
-  position: absolute;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
 
   .footerList {
     display: flex;
@@ -49,11 +44,6 @@
     flex-direction: column;
     align-items: center;
 
-    .logoBox {
-      margin: 0 auto;
-      height: 0.4rem;
-      width: 1.81rem;
-    }
 
     .community {
       margin-top: 0.2rem;
@@ -90,6 +80,9 @@
 
 @media (min-width: 768px) {
   .footerBox {
-    display: none;
+    .footerList, .footerContent {
+      width: 14.4rem;
+      margin: 0 auto;
+    }
   }
 }

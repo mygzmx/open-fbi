@@ -21,7 +21,8 @@ const JumpInput:FC<IProps> = ({ currentPage, totalPage, onJumpChange }) => {
       value={value}
       step={1}
       onInput={(e) => {
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const page = e.target && e.target.value && parseInt(e.target?.value) ? parseInt(e.target?.value) : 0;
         if (page > 0) {
           setValue(page > totalPage ? totalPage : page);
@@ -33,7 +34,8 @@ const JumpInput:FC<IProps> = ({ currentPage, totalPage, onJumpChange }) => {
       }}
       onKeyDown={(e) => {
         if (e.keyCode === 13 || e.code === "Enter") {
-          // @ts-ignore
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-expect-error
           const page = e.target && e.target?.value && parseInt(e.target?.value) ? parseInt(e.target?.value) : 0;
           if (page && page > 0) {
             onJumpChange(page > totalPage ? totalPage : page)

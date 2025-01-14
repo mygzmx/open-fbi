@@ -1,6 +1,6 @@
 'use server'
 
-import webpush from 'web-push'
+import webpush, { PushSubscription } from 'web-push'
 
 webpush.setVapidDetails(
   'mailto:350926623@qq.com',
@@ -30,6 +30,7 @@ export async function sendNotification(message: string) {
   }
 
   try {
+    if (!subscription) return;
     await webpush.sendNotification(
       subscription,
       JSON.stringify({

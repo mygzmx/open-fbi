@@ -5,6 +5,8 @@ import { SafeArea } from 'antd-mobile'
 import { BrowserIcon } from "@/components/BrowserIcon";
 import { setCookieTheme } from "@/utils/cookie";
 import { useRouter } from 'next/navigation';
+import PageFooter from "@/layout/footer";
+import Link from "next/link";
 import styles from "@/layout/page/index.module.scss";
 
 type IProps = {
@@ -12,7 +14,7 @@ type IProps = {
   theme: string;
 }
 
-const PageLayout: FC<IProps> = ({ children, theme}) => {
+const PageLayout: FC<IProps> = ({ children, theme }) => {
 
   const [themeColor, setThemeColor] = useState(theme);
   const router = useRouter();
@@ -34,21 +36,21 @@ const PageLayout: FC<IProps> = ({ children, theme}) => {
   return <>
     <SafeArea position={"top"}/>
     <div className={styles.navContainer}>
-      <div className={styles.navLeft}>
-      <Image
-        className={styles.logo}
-        width={40}
-        height={40}
-        src={"/images/logo.jpeg"}
-        alt={'FEHUB'}
-      />
-        <div className={styles.intro}>FEHUB</div>
-      </div>
+      <Link href={'/'} className={styles.navLeft}>
+        <Image
+          className={styles.logo}
+          width={40}
+          height={40}
+          src={"/images/logo.jpeg"}
+          alt={'FEHUB'}
+        />
+        <div className={styles.intro}>DramaBox</div>
+      </Link>
       <div className={styles.navRight}>
         <div onClick={onChangeTheme} className={styles.theme}>
-          { themeColor === 'dark' ?
+          {themeColor === 'dark' ?
             <BrowserIcon browser={'Moon'} size={15} className={styles.moon} style={{ fill: '#e6e6e6' }}/> :
-            <BrowserIcon browser={'Sun'} size={24} className={styles.sun} />
+            <BrowserIcon browser={'Sun'} size={24} className={styles.sun}/>
           }
         </div>
 
@@ -65,10 +67,8 @@ const PageLayout: FC<IProps> = ({ children, theme}) => {
     </div>
 
     {children}
-    <footer className={styles.footerBox}>
-      1212
-    </footer>
-    <SafeArea position='bottom' />
+    <PageFooter/>
+    <SafeArea position='bottom'/>
   </>
 }
 

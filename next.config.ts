@@ -86,7 +86,7 @@ const nextConfig: NextConfig = {
   },
 }
 
-const noWrapper = (config) => config;
+const noWrapper = (config: any) => config;
 
 const withBundleAnalyzer = process.env.ANALYZE === 'true' ? analyzer() : noWrapper;
 
