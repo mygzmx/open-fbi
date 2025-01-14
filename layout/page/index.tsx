@@ -1,7 +1,7 @@
 "use client"
 import React, { FC, useEffect, useState } from "react";
 import Image from "next/image"
-import { BrowserIcon } from "@/components/BrowserIcon";
+import { BrowserIcon } from "@/components/browserIcon";
 import { setCookieTheme } from "@/utils/cookie";
 import { useRouter } from 'next/navigation';
 import PageFooter from "@/layout/footer";

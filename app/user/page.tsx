@@ -1,12 +1,12 @@
-import Link from "next/link";
 import { NextPage } from "next";
+import LoginBtn from "@/app/user/LoginBtn";
 
 const User: NextPage = () => {
+
   return (
     <main>
       user center
-
-      <Link href={'/'}>home</Link>
+      <LoginBtn />
     </main>
   );
 }

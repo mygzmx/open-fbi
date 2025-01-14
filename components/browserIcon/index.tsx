@@ -1,14 +1,14 @@
 import React, { memo } from 'react';
-import Brave from '@/components/BrowserIcon/components/Brave';
-import Chrome from '@/components/BrowserIcon/components/Chrome';
-import Chromium from '@/components/BrowserIcon/components/Chromium';
-import Edge from '@/components/BrowserIcon/components/Edge';
-import Firefox from '@/components/BrowserIcon/components/Firefox';
-import Opera from '@/components/BrowserIcon/components/Opera';
-import Safari from '@/components/BrowserIcon/components/Safari';
-import Samsung from '@/components/BrowserIcon/components/Samsung';
-import Sun from "@/components/BrowserIcon/components/Sun";
-import Moon from "@/components/BrowserIcon/components/Moon";
+import Brave from '@/components/browserIcon/components/Brave';
+import Chrome from '@/components/browserIcon/components/Chrome';
+import Chromium from '@/components/browserIcon/components/Chromium';
+import Edge from '@/components/browserIcon/components/Edge';
+import Firefox from '@/components/browserIcon/components/Firefox';
+import Opera from '@/components/browserIcon/components/Opera';
+import Safari from '@/components/browserIcon/components/Safari';
+import Samsung from '@/components/browserIcon/components/Samsung';
+import Sun from "@/components/browserIcon/components/Sun";
+import Moon from "@/components/browserIcon/components/Moon";
 
 const lastVersion = {
   'Sun': Sun,
