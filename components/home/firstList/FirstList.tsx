@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IBookItem } from "@/typings/home.interface";
+import { IBookItem } from "@/types/home.interfaces";
 import Link from "next/link";
 import { ImageCover } from "@/components/common/image/ImageCover";
 import { useTranslation } from "react-i18next";

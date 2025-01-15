@@ -1,23 +1,15 @@
 "use client"
-import React, { FC } from "react";
-import { ILoginData } from "@/typings/logout.interfaces";
+import React, { FC, useEffect } from "react";
 import GoogleSvg from "@/components/svg/google";
 import FacebookSvg from "@/components/svg/facebook";
-import { loginWithFacebook } from "@/fire-base/auth/facebook";
-import { loginWithGoogle } from "@/fire-base/auth/google";
-import styles from "@/app/user/LoginBtn.module.scss";
 import AppleSvg from "@/components/svg/apple";
 import classNames from "classnames";
-import { loginWithApple } from "@/fire-base/auth/apple";
-
-// 三方登陆获取信息
-export interface ILoginData {
-  loginType: "google" | "facebook";
-  avatar: string;
-  bindId: string;
-  email: string;
-  userName: string;
-}
+import { LoginType, loginWith, logout } from "@/fire-base/auth";
+import { ILoginData } from "@/types/login.interfaces";
+import { onAuthStateChanged } from "@firebase/auth";
+import { firebaseAuth } from "@/fire-base";
+import { ToastShow } from "@/utils/toast";
+import styles from "@/app/user/LoginBtn.module.scss";
 
 interface IProps {
   aa?: string;
@@ -25,20 +17,21 @@ interface IProps {
 
 const LoginBtn: FC<IProps> = ({ aa }) => {
 
-  const onGGLogin = () => {
-    loginWithGoogle();
-  }
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
+      if (user) {
+        console.log("监听状态 - 用户已登录：", user);
+      } else {
+        console.log("监听状态 - 用户未登录");
+      }
+    });
 
-  const onFBLogin = () => {
-    loginWithFacebook()
-  }
+    return () => unsubscribe();  // 清理监听
+  }, [])
 
-  const onAppleLogin = () => {
-    loginWithApple();
-  }
 
   // 登陆
-  const onLogin = (data: ILoginData) => {
+  const onLogin11 = (data: ILoginData) => {
     // const { loginType, bindId, email } = data;
     // if (loginType === "facebook") {
     //   try {
@@ -93,29 +86,43 @@ const LoginBtn: FC<IProps> = ({ aa }) => {
     // }
   }
 
+  const onLogin = (loginType: LoginType) => {
+    loginWith(loginType).then(res => {
+      console.log('google----res----->', res)
+    }).catch(err => {
+      console.log('google----err----->', err)
+    })
+  }
+
+  const onLogout = () => {
+    logout().then(() => {
+      ToastShow("已退出登录")
+    }).catch(() => {
+      console.log("退出登录失败")
+    })
+  }
+
   return <>
     <button
       className={classNames(styles.loginBtn, styles.fbLoginBtn)}
-      onClick={() => onFBLogin()}
+      onClick={() => onLogin('facebook')}
     >
       <FacebookSvg className={styles.mediaIcon} />
       <span>Sign in with Facebook</span>
     </button>
 
-    <button className={styles.loginBtn} onClick={() => {
-      onGGLogin()
-      // ToastShow("登陆失败，请重试");
-    }}>
+    <button className={styles.loginBtn} onClick={() => onLogin('google')}>
       <GoogleSvg className={styles.mediaIcon}/>
       <span>Sign in with Google</span>
     </button>
 
-    <button className={styles.loginBtn} onClick={() => {
-      onAppleLogin()
-      // ToastShow("登陆失败，请重试");
-    }}>
+    <button className={styles.loginBtn} onClick={() => onLogin('apple')}>
       <AppleSvg className={styles.mediaIcon}/>
       <span>Sign in with Apple</span>
+    </button>
+
+    <button className={styles.loginBtn} onClick={() => onLogout()}>
+      <span>logout</span>
     </button>
   </>
 }

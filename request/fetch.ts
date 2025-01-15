@@ -1,5 +1,5 @@
-import { AnyObject } from "@/typings/hive.interfaces";
-import { ELanguage } from "@/typings/home.interface";
+import { AnyObject } from "@/types/common.interfaces";
+import { ELanguage } from "@/types/home.interfaces";
 
 // AbortController超时配置
 const fetchWithTimeout = (url: string, options: RequestInit & { timeout?: number }): Promise<Response | void> => {

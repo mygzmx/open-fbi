@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { ImageProps } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 import { UrlObject } from "url";
-import { ELanguage } from "@/typings/home.interface";
+import { ELanguage } from "@/types/home.interfaces";
 import DefaultCover from "@/components/icons/defaultCover";
 import classNames from "classnames";
 import styles from "@/components/common/image/index.module.scss";
