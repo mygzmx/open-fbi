@@ -3,7 +3,7 @@ import { loginWithFacebook } from "@/fire-base/auth/facebook";
 import { loginWithApple } from "@/fire-base/auth/apple";
 import { signOut } from "firebase/auth";
 import { firebaseAuth } from "@/fire-base";
-import { UserCredential, onAuthStateChanged } from "@firebase/auth";
+import { UserCredential } from "@firebase/auth";
 
 export type LoginType = "google" | "facebook" | "apple";
 
@@ -23,11 +23,3 @@ export const loginWith: LoginWith = (loginType) => {
 
 
 export const logout = () => signOut(firebaseAuth);
-
-export const loginState = () => onAuthStateChanged(firebaseAuth, (user) => {
-  if (user) {
-    console.log("监听状态 - 用户已登录：", user);
-  } else {
-    console.log("监听状态 - 用户未登录");
-  }
-});

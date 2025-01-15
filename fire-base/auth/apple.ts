@@ -12,8 +12,8 @@ export const loginWithApple = () => {
       const user = result.user;
       // Apple credential
       const credential = OAuthProvider.credentialFromResult(result);
-      const accessToken = credential.accessToken;
-      const idToken = credential.idToken;
+      const accessToken = credential?.accessToken;
+      const idToken = credential?.idToken;
       // IdP data available using getAdditionalUserInfo(result)
       console.log('Apple--------->', user)
       return user

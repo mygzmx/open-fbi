@@ -1,14 +1,13 @@
 "use client"
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import GoogleSvg from "@/components/svg/google";
 import FacebookSvg from "@/components/svg/facebook";
 import AppleSvg from "@/components/svg/apple";
 import classNames from "classnames";
 import { LoginType, loginWith, logout } from "@/fire-base/auth";
 import { ILoginData } from "@/types/login.interfaces";
-import { onAuthStateChanged } from "@firebase/auth";
-import { firebaseAuth } from "@/fire-base";
 import { ToastShow } from "@/utils/toast";
+import { useLoginState } from "@/hooks/useLoginState";
 import styles from "@/app/user/LoginBtn.module.scss";
 
 interface IProps {
@@ -16,19 +15,8 @@ interface IProps {
 }
 
 const LoginBtn: FC<IProps> = ({ aa }) => {
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
-      if (user) {
-        console.log("监听状态 - 用户已登录：", user);
-      } else {
-        console.log("监听状态 - 用户未登录");
-      }
-    });
-
-    return () => unsubscribe();  // 清理监听
-  }, [])
-
+  // 监听用户登录状态
+  useLoginState();
 
   // 登陆
   const onLogin11 = (data: ILoginData) => {
