@@ -30,9 +30,9 @@ export async function sendNotification(message: string, subscription: PushSubscr
     await webpush.sendNotification(
       subscription,
       JSON.stringify({
-        title: 'Test Notification',
+        title: '👴🏻👐🏻👍🏻🫵🏻🤟🏻听懂🫡👏🏻👏🏻',
         body: message,
-        icon: '/apple-touch-icon.png',
+        icon: '/images/logo.jpeg',
       })
     )
     return { success: true }
