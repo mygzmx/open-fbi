@@ -16,7 +16,7 @@ interface IProps {
 
 const LoginBtn: FC<IProps> = ({ aa }) => {
   // 监听用户登录状态
-  const [user, setUser] = useLoginState();
+  const user = useLoginState();
 
   // 登陆
   const onLogin11 = (data: ILoginData) => {
@@ -81,10 +81,7 @@ const LoginBtn: FC<IProps> = ({ aa }) => {
   }, [user])
 
   const onLogin = (loginType: LoginType) => {
-    loginWith(loginType).then(res => {
-      setUser(res);
-      // console.log('google----res----->', res)
-    }).catch(err => {
+    loginWith(loginType).catch(err => {
       console.log('onLogin----err----->', err)
     })
   }

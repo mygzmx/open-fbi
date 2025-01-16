@@ -11,7 +11,7 @@ const appId = "629274312371363";
 // 监听状态
 export const useLoginState = () => {
 
-  const [user, setUser] = useState<User>(null)
+  const [user, setUser] = useState<User | null>(null)
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
@@ -36,19 +36,21 @@ export const useLoginState = () => {
         callback: handleCredentialResponse,
       });
       // 显示 One Tap 提示框
-      google?.accounts.id.prompt((notification) => {
-        if (notification.isNotDisplayed()) {
-          console.log("One Tap 登录未显示，原因：", notification.getNotDisplayedReason());
-        }
-        if (notification.isSkippedMoment()) {
-          console.log("用户跳过了 One Tap 提示");
+      google?.accounts.id.prompt((notification: any) => {
+        if (notification) {
+          if (notification.isNotDisplayed && notification.isNotDisplayed()) {
+            console.log("One Tap 登录未显示，原因：", notification.getNotDisplayedReason());
+          }
+          if (notification.isSkippedMoment && notification.isSkippedMoment()) {
+            console.log("用户跳过了 One Tap 提示");
+          }
         }
       });
     }
   }
 
   // 处理 Google 登录回调
-  const handleCredentialResponse = async (response) => {
+  const handleCredentialResponse = async (response: { credential: string }) => {
     console.log("Google 登录成功，ID Token：", response.credential);
     // 使用 Firebase 验证 Google 的 ID Token
     const credential = GoogleAuthProvider.credential(response.credential);
@@ -56,10 +58,10 @@ export const useLoginState = () => {
       const userCredential = await signInWithCredential(firebaseAuth, credential);
       console.log("Firebase 登录成功，用户信息：", userCredential.user);
       setUser(userCredential.user)
-    } catch (error) {
-      console.error("Firebase 登录失败：", error.message);
+    } catch (error: any) {
+      console.error("Firebase 登录失败：", error && error?.message ? error.message : error);
     }
   };
 
-  return [user, setUser]
+  return user
 }
