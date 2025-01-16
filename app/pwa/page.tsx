@@ -45,9 +45,7 @@ function PushNotificationManager() {
     const registration = await navigator.serviceWorker.ready
     const sub = await registration.pushManager.subscribe({
       userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(
-        process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!
-      ),
+      applicationServerKey: urlBase64ToUint8Array("BH9z78R_4MotEZGzIlW6gjBPTlRqwsSGTxAHnqzgP_fYB-9ejLOXpMF8V6PbpxKA1qJs-lHck_aVwRxCu4sfLEI"),
     })
     setSubscription(sub)
     await subscribeUser()

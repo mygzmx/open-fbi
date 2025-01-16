@@ -4,8 +4,8 @@ import webpush, {PushSubscription} from 'web-push'
 
 webpush.setVapidDetails(
   'mailto:350926623@qq.com',
-  process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!
+  'BH9z78R_4MotEZGzIlW6gjBPTlRqwsSGTxAHnqzgP_fYB-9ejLOXpMF8V6PbpxKA1qJs-lHck_aVwRxCu4sfLEI',
+  '3XbGAiORgko1nlpVNqsGTal7_8zU5WBQz3UuqK26BxI'
 )
 
 export async function subscribeUser() {
@@ -30,9 +30,9 @@ export async function sendNotification(message: string, subscription: PushSubscr
     await webpush.sendNotification(
       subscription,
       JSON.stringify({
-        title: 'Test Notification',
+        title: '👴🏻👐🏻👍🏻🫵🏻🤟🏻听懂🫡👏🏻👏🏻',
         body: message,
-        icon: '/apple-touch-icon.png',
+        icon: '/images/logo.jpeg',
       })
     )
     return { success: true }
