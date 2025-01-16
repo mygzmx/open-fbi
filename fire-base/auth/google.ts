@@ -16,7 +16,7 @@ export const loginWithGoogle = () => {
     // The signed-in user info.
     const user = result.user;
     // IdP data available using getAdditionalUserInfo(result)
-    console.log('google----111----->', user)
+    console.log('google-------->', user)
     return user;
   }).catch((error) => {
     // Handle Errors here.

@@ -1,5 +1,5 @@
 "use client"
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import GoogleSvg from "@/components/svg/google";
 import FacebookSvg from "@/components/svg/facebook";
 import AppleSvg from "@/components/svg/apple";
@@ -9,7 +9,6 @@ import { ILoginData } from "@/types/login.interfaces";
 import { ToastShow } from "@/utils/toast";
 import { useLoginState } from "@/hooks/useLoginState";
 import styles from "@/app/user/LoginBtn.module.scss";
-import { useGoogleOneTap } from "@/hooks/useGoogleOneTap";
 
 interface IProps {
   aa?: string;
@@ -17,7 +16,7 @@ interface IProps {
 
 const LoginBtn: FC<IProps> = ({ aa }) => {
   // 监听用户登录状态
-  useLoginState();
+  const [user, setUser] = useLoginState();
 
   // 登陆
   const onLogin11 = (data: ILoginData) => {
@@ -75,11 +74,18 @@ const LoginBtn: FC<IProps> = ({ aa }) => {
     // }
   }
 
+  useEffect(() => {
+    if (user) {
+      console.log('三方登录成功-------------->', user);
+    }
+  }, [user])
+
   const onLogin = (loginType: LoginType) => {
     loginWith(loginType).then(res => {
-      console.log('google----res----->', res)
+      setUser(res);
+      // console.log('google----res----->', res)
     }).catch(err => {
-      console.log('google----err----->', err)
+      console.log('onLogin----err----->', err)
     })
   }
 

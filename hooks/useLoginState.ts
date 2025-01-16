@@ -1,7 +1,7 @@
 "use client"
-import { onAuthStateChanged } from "@firebase/auth";
+import { onAuthStateChanged, User } from "@firebase/auth";
 import { firebaseAuth } from "@/fire-base";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { GoogleAuthProvider, signInWithCredential } from "firebase/auth";
 
 // const clientId = "965892564166-c4skf5ujfev5ovvt2rq4pjnlopehgoe8.apps.googleusercontent.com";
@@ -11,16 +11,20 @@ const appId = "629274312371363";
 // 监听状态
 export const useLoginState = () => {
 
+  const [user, setUser] = useState<User>(null)
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
       if (user) {
-        console.log("监听状态 - 用户已登录：", user);
+        // console.log("监听状态 - 用户已登录：", user);
+        setUser(user);
       } else {
-        console.log("监听状态 - 用户未登录");
+        setUser(null);
+        // console.log("监听状态 - 用户未登录");
         initGoogle();
       }
     });
-    return () => unsubscribe();  // 清理监听
+    return () => unsubscribe(); // 清理监听
   }, []) // eslint-disable-line
 
   // 初始化 Google One Tap
@@ -32,7 +36,14 @@ export const useLoginState = () => {
         callback: handleCredentialResponse,
       });
       // 显示 One Tap 提示框
-      google?.accounts.id.prompt();
+      google?.accounts.id.prompt((notification) => {
+        if (notification.isNotDisplayed()) {
+          console.log("One Tap 登录未显示，原因：", notification.getNotDisplayedReason());
+        }
+        if (notification.isSkippedMoment()) {
+          console.log("用户跳过了 One Tap 提示");
+        }
+      });
     }
   }
 
@@ -44,8 +55,11 @@ export const useLoginState = () => {
     try {
       const userCredential = await signInWithCredential(firebaseAuth, credential);
       console.log("Firebase 登录成功，用户信息：", userCredential.user);
+      setUser(userCredential.user)
     } catch (error) {
       console.error("Firebase 登录失败：", error.message);
     }
   };
+
+  return [user, setUser]
 }
