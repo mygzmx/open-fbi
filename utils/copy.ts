@@ -1,3 +1,4 @@
+"use client"
 const copyExecCommand = function (text: string) {
   try {
     const _textArea = document.createElement('textArea');

@@ -1,0 +1,94 @@
+.pageContent {
+  text-align: center;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  .normalLi, .activePage, .prevNoMore, .prevBtn, .nextNoMore, .nextBtn, .omission {
+    width: 0.36rem;
+    height: 0.36rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.05rem;
+    box-sizing: border-box;
+    font-size: 0.16rem;
+    cursor: pointer;
+    border-radius: 0.04rem;
+    color: #555555;
+    background-color: #F5F5F5;
+    transition: all 0.3s;
+    text-decoration: none !important;
+
+    &:hover {
+      //background-color: rgba(255,255,255,0.16);
+      background-color: rgba(245, 245, 247, 0.9);
+    }
+  }
+
+  .activePage {
+    color: #FF4614;
+    background-color: #FFF1EC;
+  }
+
+  .prevNextIcon {
+    width: 0.18rem;
+    height: 0.18rem;
+  }
+
+  .nextBtn, .nextNoMore {
+    .prevNextIcon {
+      width: 0.18rem;
+      height: 0.18rem;
+      transform: rotate(180deg);
+    }
+  }
+
+  .omission {
+    border: none !important;
+    //background-color: rgba(255,255,255,0.08) !important;
+    background-color: transparent !important;
+    cursor: default;
+  }
+
+  .prevNoMore, .nextNoMore {
+    cursor: not-allowed;
+    opacity: 0.9;
+    //background-color: rgba(255,255,255,0.08) !important;
+    background-color: rgba(245, 245, 247, 0.9) !important;
+  }
+}
+
+
+.jumpInputBox {
+  font-size: 0.14rem;
+  color: #555555;
+  margin-left: 0.3rem;
+
+  .jumpInput {
+    font-size: 0.16rem !important;
+    color: #555555 !important;
+    width: 0.36rem;
+    height: 0.36rem;
+    background-color: #F5F5F5;
+    border-radius: 0.04rem;
+    text-align: center;
+    margin: 0 0.1rem 0 0.16rem;
+
+    &:enabled:read-write:-webkit-any(:focus, :hover)::-webkit-inner-spin-button {
+      display: none;
+      -webkit-appearance:none;
+    }
+    &::-webkit-inner-spin-button {
+      display: none;
+      -webkit-appearance:none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .pageContent{
+    display:none;
+  }
+}

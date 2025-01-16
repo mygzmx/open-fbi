@@ -1,0 +1,124 @@
+.swiperBox {
+  margin-bottom: 0.56rem;
+  overflow: initial;
+  padding: 0 0.16rem;
+
+  :global {
+    button {
+      display: none;
+    }
+
+    .slick-dots {
+      font-size: 0;
+      bottom: -15px;
+
+      li {
+        width: 0.16rem;
+        height: 0.07rem;
+        border-radius: 0.04rem;
+        background: rgba(255, 255, 255, 0.12);
+        margin: 0 0.05rem;
+      }
+      .slick-active {
+        background-color: #FF375F !important;
+      }
+    }
+
+    .slick-slide {
+      font-size: 0;
+      padding: 0 0.08rem;
+    }
+  }
+}
+
+.swiperItem {
+  width: 100%;
+  height: 2.94rem;
+  display: flex !important;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.08rem;
+  position: relative;
+
+  .contentImgBox {
+    width: 2.18rem;
+    height: 2.94rem;
+    flex-shrink: 0;
+    border-radius: 0.08rem;
+  }
+}
+
+.rightCard {
+  padding: 0.16rem 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .rightCardTop {
+    max-width: 4rem;
+
+    .bookName {
+      font-size: 0.28rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 0.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      word-wrap: break-word;
+      margin-bottom: 0.16rem;
+    }
+
+    .chapterCount {
+      display: block;
+      font-size: 0.22rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 0.3rem;
+      margin-bottom: 0.16rem;
+    }
+
+    .intro {
+      font-size: 0.24rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.4);
+      line-height: 0.33rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      word-wrap: break-word;
+    }
+  }
+
+  .rightCardBottom {
+    overflow: hidden;
+    max-width: 4.5rem;
+    max-height: 0.36rem;
+    font-size: 0.22rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    grid-gap: 0.08rem;
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 0.36rem;
+
+    .rightTag {
+      flex-shrink: 0;
+      padding: 0 0.12rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 0.18rem;
+    }
+  }
+
+}
+
+
+@media (min-width: 768px) {
+  .swiperBox {
+    display: none;
+  }
+}

@@ -1,4 +1,3 @@
-
 export enum EDevice {
   mobile = 1,
   pc = 2,

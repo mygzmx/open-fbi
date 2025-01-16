@@ -1,26 +1,29 @@
 {
   "home": {
-    "home": "首页",
-    "recommend": "推荐",
-    "browse": "分类",
+    "home": "首頁",
+    "recommend": "推薦",
+    "resources": "資源",
+    "browse": "分類",
     "app": "App",
     "more": "更多",
-    "privacyPolicy": "隐私政策",
-    "termsOfUse": "用户协议",
-    "allRightsReserved": "版权所有",
+    "privacyPolicy": "隱私政策",
+    "termsOfUse": "用戶協議",
+    "allRightsReserved": "版權所有",
     "play": "播放",
-    "back": "返回",
-    "email": "邮箱",
-    "emptyDesc": "没找到内容",
+    "back": "返迴",
+    "email": "郵箱",
+    "emptyDesc": "沒找到內容",
     "episodes": "集",
-    "about": "关于我们",
-    "contact": "联系我们",
-    "community": "社区"
+    "about": "關於我們",
+    "contact": "聯繫我們",
+    "community": "社區",
+    "business": "商業合作",
+    "joinUs": "加入我們"
   },
-  "热门好剧": "热门好剧",
-  "必看好剧": "必看好剧",
-  "当前热播": "当前热播",
-  "精彩剧集": "精彩剧集",
+  "热门好剧": "熱門好劇",
+  "必看好剧": "必看好劇",
+  "当前热播": "當前熱播",
+  "精彩剧集": "精彩劇集",
   "browse": {
     "all": "全部"
   },
@@ -28,35 +31,29 @@
     "playNow": "立即播放",
     "more": "更多",
     "viewMore": "查看更多",
-    "introduction": "简介",
-    "previousPage": "上一页",
-    "nextPage": "下一页",
-    "lastChapterTip": "当前已在最后一页",
-    "firstChapterTip": "当前已在第一页",
-    "like": "你也许也喜欢",
-    "relatedEpisodes": "相关剧集",
-    "downloadTip": "本集需要下载App观看",
-    "episodesDownload": "下载应用",
+    "introduction": "簡介",
+    "previousPage": "上一頁",
+    "nextPage": "下一頁",
+    "lastChapterTip": "當前已在最後一頁",
+    "firstChapterTip": "當前已在第一頁",
+    "like": "你也許也喜歡",
+    "relatedEpisodes": "相關劇集",
+    "downloadTip": "本集需要下載App觀看",
+    "episodesDownload": "下載應用",
     "episodes": "集",
     "first": "第",
     "episode": "集",
-    "recLike": "猜你喜欢",
-    "totalEpisodes": "剧集数",
-    "episodeList": "剧集列表",
+    "recLike": "猜你喜歡",
+    "totalEpisodes": "劇集數",
+    "episodeList": "劇集列表",
     "share": "分享",
-    "shareCopy": "链接已粘贴到剪贴板。"
-  },
-  "appPage": {
-    "title": "DramaBox - 追剧，电视，精彩故事",
-    "content": "在通勤、午餐时间或长时间工作学习后想放鬆吗？\n那就来试试我们的APP吧！\n热播爽剧追不停，随时随地嗨翻天！\n从独立电影到屡获殊荣的电视剧，我们为您提供多样的选择和持续更新的作品，总有精彩的内容吸引你！",
-    "download": "下载",
-    "clickCopy": "点击复制链接",
-    "copied": "已复制，请在手机浏览器中打开链接下载应用程序",
-    "copyGuide": "请使用手机扫描二维码下载。\n或复制链接，用手机浏览器打开后下载。",
-    "slogan": "进入短剧世界"
+    "shareCopy": "連結已粘貼到剪貼板。",
+    "download": "下載",
+    "clickCopy": "點擊復製鏈接",
+    "bookRemoved": "該劇已下架，下載app觀看更多精彩內容"
   },
   "others": {
-    "error": "404  抱歉，页面出现错误。"
+    "error": "404 抱歉，页面出现错误。"
   },
   "tag": {
     "relevant": "Relevant popular keywords",
@@ -66,9 +63,26 @@
     "relation4": "related content information."
   },
   "banner": {
-    "OpenApp": "更多精彩内容，尽在DramaBox",
-    "Open": "打开",
-    "GuideText": "打开DramaBox App",
-    "GuideOpen": "打开"
+    "OpenApp": "更多精彩內容，盡在DramaBox",
+    "Open": "打開",
+    "GuideText": "打開DramaBox App",
+    "GuideOpen": "打開"
+  },
+  "search": {
+    "tip": "搜索",
+    "noReult": "沒有找到相關內容",
+    "tryWatch": "試看15s，下載app觀看完整劇集",
+    "resultTip1": "找到 ",
+    "resultTip2": " 個和 ",
+    "resultTip3": " 相關的結果"
+  },
+  "film":{
+    "openText":"打開app，體驗完整服務",
+    "getApp":"獲得完整的應用體驗",
+    "moreFun":"在應用中觀看更多短劇並體驗強大功能",
+    "open":"打開Dramabox",
+    "notNow":"暫時不要",
+    "useApp":"使用app，體驗短劇自動連播",
+    "nextSet":"下一集"
   }
 }

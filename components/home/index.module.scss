@@ -1,0 +1,24 @@
+.homeWrap {
+  min-height: 100vh;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0.32rem 0 0;
+
+  .mainContent {
+    padding: 0.16rem 0.32rem 0.32rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .homeWrap {
+    min-height: calc(100vh - 3rem);
+    width: 14.4rem;
+    margin: 0 auto;
+    padding: 0;
+
+    .mainContent {
+      padding: 0;
+    }
+  }
+}
