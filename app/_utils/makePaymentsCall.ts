@@ -4,9 +4,9 @@ import type { PaymentData } from "@adyen/adyen-web";
 
 async function makePaymentsCall(
     data: PaymentData,
-    countryCode,
-    shopperLocale,
-    amount,
+    countryCode: string,
+    shopperLocale: string,
+    amount: { value: number, currency: string},
 ) {
     const paymentsRequest = {
         ...paymentsConfig,

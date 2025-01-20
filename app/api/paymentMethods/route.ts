@@ -15,7 +15,7 @@ export async function POST(request: Request, context: any) {
                 "Access-Control-Allow-Origin": "*",
                 "Content-Type": "application/json",
                 "X-Api-Key": process.env.CHECKOUT_API_KEY,
-            },
+            } as HeadersInit,
         },
     );
 

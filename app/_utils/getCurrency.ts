@@ -1,4 +1,4 @@
-const currencies = {
+const currencies: { [key: string]: string } = {
     AR: "ARS",
     AU: "AUD",
     BR: "BRL",

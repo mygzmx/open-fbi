@@ -57,17 +57,19 @@ export default function Redirect() {
                     data: PaymentCompletedData,
                     component?: UIElement,
                 ) {
-                    document.querySelector(
-                        "#result-container > pre",
-                    ).innerHTML = JSON.stringify(data, null, "\t");
+                    const resultContainerPreDom = document.querySelector("#result-container > pre")
+                    if (resultContainerPreDom) {
+                      (resultContainerPreDom as HTMLDivElement).innerHTML = JSON.stringify(data, null, "\t");
+                    }
                 },
                 onPaymentFailed(
                     data?: PaymentFailedData,
                     component?: UIElement,
                 ) {
-                    document.querySelector(
-                        "#result-container > pre",
-                    ).innerHTML = "Payment failed";
+                  const resultContainerPreDom = document.querySelector("#result-container > pre")
+                  if (resultContainerPreDom) {
+                    (resultContainerPreDom as HTMLDivElement).textContent = "Payment failed";
+                  }
                 },
                 onError: (error: AdyenCheckoutError) => {
                     console.error("Something went wrong", error);
@@ -80,8 +82,8 @@ export default function Redirect() {
     );
 
     useEffect(() => {
-        const redirectResult = searchParams.get("redirectResult");
-        const sessionId = searchParams.get("sessionId");
+        const redirectResult = searchParams.get("redirectResult") || "";
+        const sessionId = searchParams.get("sessionId") || "";
 
         if (redirectResult) {
             if (isRedirectHandled.current) return;
@@ -89,8 +91,10 @@ export default function Redirect() {
             isRedirectHandled.current = true;
             void handleRedirectResult(redirectResult, sessionId);
         } else {
-            document.querySelector("#result-container").innerHTML =
-                "No redirectResult available";
+          const resultContainerDom = document.querySelector("#result-container");
+          if (resultContainerDom) {
+            (resultContainerDom as HTMLDivElement).textContent = "No redirectResult available";
+          }
         }
     }, [searchParams, handleRedirectResult]);
 

@@ -1,6 +1,6 @@
 import { DEFAULT_SHOPPER_REFERENCE } from "@/app/_utils/constants";
 
-async function makePaymentMethodsCall({ countryCode, shopperLocale, amount }) {
+async function makePaymentMethodsCall({ countryCode, shopperLocale, amount }: { countryCode: string; shopperLocale: string; amount: { value: number, currency: string} }) {
     try {
         const paymentMethodsConfig = {
             countryCode,
