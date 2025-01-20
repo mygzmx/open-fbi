@@ -2,6 +2,22 @@
 # yarn lockfile v1
 
 
+"@adyen/adyen-web@^6.7.0":
+  version "6.7.0"
+  resolved "https://registry.npmmirror.com/@adyen/adyen-web/-/adyen-web-6.7.0.tgz#c3f17054779a61d42c14a94e05b15634b1882903"
+  integrity sha512-jIL1bAcHLxLD0OZhygPZmLmopHb4qmyW/WqN6HtS09srso6V6iQoXAnWIHkTvR+/PuitS0bmdvG98/4HgELIBA==
+  dependencies:
+    "@adyen/bento-design-tokens" "1.10.0"
+    "@types/applepayjs" "14.0.8"
+    "@types/googlepay" "0.7.6"
+    classnames "2.5.1"
+    preact "10.22.1"
+
+"@adyen/bento-design-tokens@1.10.0":
+  version "1.10.0"
+  resolved "https://registry.npmmirror.com/@adyen/bento-design-tokens/-/bento-design-tokens-1.10.0.tgz#6e93631410db39c916665ddc3ea4a3361c95a6d5"
+  integrity sha512-ZaWLGTLLW0bh69mu9ibGMaZ2DXkrB07XU3gc5Mt1fTZgNDAnCsdfJ/Wq7BxW3zYhtQLU69oz0QayZ3RDKTlHEA==
+
 "@babel/runtime@^7.23.2", "@babel/runtime@^7.23.9":
   version "7.26.0"
   resolved "https://registry.npmmirror.com/@babel/runtime/-/runtime-7.26.0.tgz#8600c2f595f277c60815256418b85356a65173c1"
@@ -864,6 +880,16 @@
   dependencies:
     tslib "^2.8.0"
 
+"@types/applepayjs@14.0.8":
+  version "14.0.8"
+  resolved "https://registry.npmmirror.com/@types/applepayjs/-/applepayjs-14.0.8.tgz#803276dc623908390594697bb2d5b7bc89f28eef"
+  integrity sha512-Yzf5OSitdS+/G8cjaAkPJ0+pBOEf9Vik1XUCdw6ul7Qh6Xb18wTlG/sWA5jKIme3x4fbyTGlSd4mfkvdtP9mRw==
+
+"@types/googlepay@0.7.6":
+  version "0.7.6"
+  resolved "https://registry.npmmirror.com/@types/googlepay/-/googlepay-0.7.6.tgz#ba444ad8b2945e70f873673b8f5371745b8cfe37"
+  integrity sha512-5003wG+qvf4Ktf1hC9IJuRakNzQov00+Xf09pAWGJLpdOjUrq0SSLCpXX7pwSeTG9r5hrdzq1iFyZcW7WVyr4g==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.npmmirror.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -1310,7 +1336,7 @@ chokidar@^4.0.0:
   dependencies:
     readdirp "^4.0.1"
 
-classnames@^2.2.5:
+classnames@2.5.1, classnames@^2.2.5:
   version "2.5.1"
   resolved "https://registry.npmmirror.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
   integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
@@ -3128,6 +3154,11 @@ postcss@8.4.31:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
+
+preact@10.22.1:
+  version "10.22.1"
+  resolved "https://registry.npmmirror.com/preact/-/preact-10.22.1.tgz#6a3589973fe0c6e53211091607d31f4b7b27334d"
+  integrity sha512-jRYbDDgMpIb5LHq3hkI0bbl+l/TQ9UnkdQ0ww+lp+4MMOdqaUYdFc5qeyP+IV8FAd/2Em7drVPeKdQxsiWCf/A==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
