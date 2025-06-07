@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import type { Metadata, Viewport } from "next";
 import { Lora } from "next/font/google";
 import { GoogleAnalytics as GA } from '@next/third-parties/google';
@@ -51,7 +51,6 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
   const theme = cookieStore.get(OPEN_FBI_THEME);
   const lang = cookieStore.get(OPEN_FBI_LOCALE);
   const direction = isRtlLang(lang?.value || DEFAULT_LANG) ? 'rtl' : 'ltr';
-
   return (
     <html dir={direction} lang={lang?.value || DEFAULT_LANG} data-theme={theme?.value || "light"} suppressHydrationWarning>
       <body className={lora.className}>

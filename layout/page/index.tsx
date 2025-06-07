@@ -42,7 +42,7 @@ const PageLayout: FC<IProps> = ({ children, theme }) => {
           src={"/images/logo.jpeg"}
           alt={'FEHUB'}
         />
-        <div className={styles.intro}>DramaBox</div>
+        <div className={styles.intro}>FEHUB</div>
       </Link>
       <div className={styles.navRight}>
         <div onClick={onChangeTheme} className={styles.theme}>

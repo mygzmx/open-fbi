@@ -1,0 +1,29 @@
+.videoBox {
+  position: relative;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #1a1a1a;
+
+    &:fullscreen, &:-webkit-full-screen {
+      background-color: #1a1a1a;
+    }
+  }
+}
+
+.videoBoxFull {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: calc(var(--vh) * 100) !important;
+  z-index: 2147483647;
+  //background-color: #000;
+
+  .videoBox {
+    height: calc(var(--vh) * 100) !important;
+    //box-shadow: 0 0 1rem 50vh #000;
+  }
+}
